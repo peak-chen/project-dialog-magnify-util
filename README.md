@@ -2,8 +2,8 @@
 一个类似于图片查看器的开源插件,使用方法详见doc里的demo;自定义支持多张图片的查看,方法如下:
 1.页面引用css:
     <link rel="stylesheet" href="/magnify/docs/font-awesome-4.7.0/css/font-awesome.min.css" >
-    <link rel="stylesheet" href="/magnify/dist/jquery.magnify.min.css">
-    <link rel="stylesheet" href="/magnify/docs/css/self-black-theme.css">
+    <link rel="stylesheet" href="../magnify/dist/jquery.magnify.min.css">
+    <link rel="stylesheet" href="../magnify/docs/css/self-black-theme.css">
 	
 2.图片对象封装(无图显示的情况):
 	<div id="passImg" style="display: none;">
@@ -12,8 +12,8 @@
 	</div>
 
 3.页面引用js:
-    <script src="/magnify/dist/jquery.magnify.js"></script>
-    <script src="/magnify/dist/jquery.magnify-chinese.js"></script>
+    <script src="../magnify/dist/jquery.magnify.js"></script>
+    <script src="../magnify/dist/jquery.magnify-chinese.js"></script>
 	
 4.js页面图片对象处理:
 
@@ -27,9 +27,9 @@
   
     // 图片弹窗显示(cellvalue为多图片的url,以#split#分割)
 	function getImg(cellvalue) {
-		//清理原图片缓存
+		// 清理原图片缓存
 		$('[data-show=add]').remove();
-		// 视频方案有两张图片
+		// 有两张图片
 		var imgObjectList = cellvalue.split("#split#");
 		if (null != imgObjectList && imgObjectList.length > 0) {
 			for (var i = 0, j = 1; i < imgObjectList.length; i++, j++) {
