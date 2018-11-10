@@ -1,5 +1,6 @@
 # project-dialog-magnify-util
 一个类似于图片查看器的开源插件,使用方法详见doc里的demo;自定义支持多张图片的查看,方法如下:
+
 1.页面引用css:
 
         <link rel="stylesheet" href="/magnify/docs/font-awesome-4.7.0/css/font-awesome.min.css" >
