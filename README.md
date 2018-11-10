@@ -1,19 +1,22 @@
 # project-dialog-magnify-util
 一个类似于图片查看器的开源插件,使用方法详见doc里的demo;自定义支持多张图片的查看,方法如下:
 1.页面引用css:
-    <link rel="stylesheet" href="/magnify/docs/font-awesome-4.7.0/css/font-awesome.min.css" >
-    <link rel="stylesheet" href="../magnify/dist/jquery.magnify.min.css">
-    <link rel="stylesheet" href="../magnify/docs/css/self-black-theme.css">
+
+        <link rel="stylesheet" href="/magnify/docs/font-awesome-4.7.0/css/font-awesome.min.css" >
+        <link rel="stylesheet" href="/magnify/dist/jquery.magnify.min.css">
+        <link rel="stylesheet" href="/magnify/docs/css/self-black-theme.css">
 	
 2.图片对象封装(无图显示的情况):
+
 	<div id="passImg" style="display: none;">
 		<img data-show="default" data-caption="暂无图片" data-src="<%=path%>/static/images/notExistImg.jpg"
 			 src="<%=path%>/static/images/notExistImg.jpg">
 	</div>
-
+	
 3.页面引用js:
-    <script src="../magnify/dist/jquery.magnify.js"></script>
-    <script src="../magnify/dist/jquery.magnify-chinese.js"></script>
+
+        <script src="../magnify/dist/jquery.magnify.js"></script>
+        <script src="../magnify/dist/jquery.magnify-chinese.js"></script>
 	
 4.js页面图片对象处理:
 
