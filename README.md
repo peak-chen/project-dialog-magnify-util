@@ -51,3 +51,58 @@
 			}
 		}
 	}
+
+   插件封装了放大镜功能,如果在部分弹框中需展示放大镜功能,则其用法如下:
+   
+  1.引用封装的放大镜css:
+  
+        <link rel="stylesheet" href="/static/common/magnify/docs/css/showmanagnify.css">
+   
+  2.封装图片的弹框html和js:
+   1).单张图片:
+    
+        <div id="passImg" style="display: none;">
+		<div id="magnify-large" class="magnify-large"></div>
+		<img class="small" height="420" width="600" src="<%=path%>/static/images/notExistImg.jpg">
+	</div>
+	<script type="text/javascript" src="/magnify/src/js/showmagnify.js"></script>
+	
+   调用:         
+	  
+	  $("#passImg img").attr("src", url);
+          //查看调用放大镜功能
+          showManagnify(null, null, null, $("#passImg"), $("#passImg img"), $("#magnify-large"), url);
+	
+   2).多张图片:
+        
+	<div id="body">
+	       <div id="winTop">
+		        <div id="basicInfo">
+				<div id="dataInfo">
+				   ...
+				</div>	
+			</div>
+			<div id="plateImage">
+				<div id="magnify-large1" class="magnify-large"></div>
+				<img class="small" src="<%=path%>/static/images/notExistImg.jpg">
+			</div>
+	        </div>
+		<div id="winButtom">
+			<div id="magnify-large2" class="magnify-large"></div>
+			<img class="small" src="<%=path%>/static/images/notExistImg.jpg">
+		</div>
+         </div>
+	 <script type="text/javascript" src="/static/common/magnify/src/js/showmagnify.js"></script>
+
+   调用:
+           
+	  //查看调用放大镜功能
+          showManagnify(null,"right",$("#basicInfo"),$("#plateImage"),$("#plateImage img"),$("#magnify-large1"), imgUrl1);
+	  //查看调用放大镜功能
+          showManagnify(null,null,null,$("#winButtom"),$("#winButtom img"),$("#magnify-large2"), imgUrl2);
+
+
+	 
+	 
+	
+        
