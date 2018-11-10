@@ -59,6 +59,7 @@
         <link rel="stylesheet" href="/static/common/magnify/docs/css/showmanagnify.css">
    
   2.封装图片的弹框html和js:
+  
    1).单张图片:
     
         <div id="passImg" style="display: none;">
